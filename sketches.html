@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Projects | Sketches - Stefan Savanović - Digital Designer</title>
+    <link rel="icon" href="/images/favicon.png">
+     <!--CSS -->
+     <link rel="stylesheet" href="css/styles.css">
+
+      <!-- Font Awesome -->
+  <script src="https://kit.fontawesome.com/198f8c7cb8.js" crossorigin="anonymous"></script>
+
+  <a href="/works.html" class="s"> <i class="fas fa-long-arrow-alt-left"></i> Work</a>
+  <a href="/sexeducation.html" class="s-r">Next <i class="fas fa-long-arrow-alt-right"></i></a>
+</head>
+<body class="project-body">
+
+    <div class="overlay2"></div>
+    <div class="overlay"></div>
+
+    <div class="smooth-scroll-wrapper">
+        <div class="content">
+            <section>
+                <div class="divs">
+                    <h1 id="pr-head">Sketches</h1>
+                    <img src="/images/image-1.png" />
+                    <h1>About the project</h1>
+                    <p>
+                        An ongoing collection of random sketches. Concepts for exploration of interaction design, web development, and other.
+                    </p>
+                </div>
+                <div class="divs">
+                    <video autoplay loop src="/images/sketches/Landing page - agency.mp4"></video>
+                </div>
+                <div class="divs">
+                    <video autoplay loop src="/images/sketches/Split-text.mp4"></video>
+                </div>
+                <div class="divs">
+                    <video autoplay loop src="/images/sketches/Landing page.mp4"></video>
+                </div>                
+                <div class="divs">
+                    <video autoplay loop src="/images/sketches/Coca-cola.mp4"></video>
+                </div>
+                <div class="divs">
+                    <img src="/images/sketches/By the river.gif" alt="">
+                </div>
+                <div class="divs">
+                    <video autoplay loop src="/images/sketches/Google arts.mp4"></video>
+                </div>
+            </section>
+        </div>
+    </div>
+
+    <script>
+        const body = document.body,
+            scrollWrap = document.getElementsByClassName("smooth-scroll-wrapper")[0],
+            height = scrollWrap.getBoundingClientRect().height - 1,
+            speed = 0.04;
+
+        var offset = 0;
+
+        body.style.height = Math.floor(height) + "px";
+
+        function smoothScroll() {
+            offset += (window.pageYOffset - offset) + speed;
+
+            var scroll = "translateY(-" + offset + "px) translateZ(0)";
+            scrollWrap.style.transform = scroll;
+
+            callScroll = requestAnimationFrame(smoothScroll);
+        }
+
+        smoothScroll();
+        const content = document.querySelector("section");
+        let currentPos = window.pageYOffset;
+
+        const callDistort = function () {
+            const newPos = window.pageYOffset;
+            const diff = newPos - currentPos;
+            const speed = diff * 0.4;
+
+            content.style.transform = "skewY(" + speed + "deg)";
+            currentPos = newPos;
+            requestAnimationFrame(callDistort);
+        };
+
+        callDistort();
+    </script>
+</body>
+</html>

@@ -1,0 +1,207 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Projects | Stefan Savanović - Digital Designer</title>
+    <link rel="icon" href="/images/favicon.png">
+     <!--CSS -->
+     <link rel="stylesheet" href="css/styles.css">
+
+      <!-- Font Awesome -->
+  <script src="https://kit.fontawesome.com/198f8c7cb8.js" crossorigin="anonymous"></script>
+
+    <!-- JQuery -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/2.1.3/jquery.min.js"></script>
+
+    <!-- TweenMax - GSAP -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/1.11.4/TweenMax.min.js"></script>
+
+     <!-- Circle links -->
+    <script src="/src/circletype.min.js"></script>
+    <script src="https://unpkg.com/ionicons@4.5.10-0/dist/ionicons.js"></script>
+
+</head>
+<body class="work-body" >
+
+    <div class="bg-work"></div> 
+    <div class="overlay2"></div>
+    <div class="overlay"></div>
+
+    <div class="intro-work">
+        <a href="/about.html" class="nav-btn btn1"  >  <i class="fas fa-long-arrow-alt-left"></i>  About </a>
+        <h1> <span class="animate"></span> </h1>
+        <a href="/works.html" class="nav-btn btn2"></a>
+   </div>
+
+<a href="https://dribbble.com/stefan_design" target="_blank">
+   <div class="dribbble">
+    <div class="circular-text">
+        <span id="rotated"
+            >follow my latest work on dribbble • follow my latest work on dribbble • dribbble • 
+        </span>
+    </div>
+   </div>
+  </a>
+
+    <div class="cursor"></div>
+    <div class="projects">
+        <h1 class="recent" >Recent Projects</h1>
+   <a href="/sexeducation.html">
+        <div class="project-list">
+          <div  class="project p-1">
+            <div class="project-title"><h1>Sex Education</h1></div>
+            <div class="project-categ">Web Design</div>
+            <div class="project-overlay"></div>
+          </div>
+   </a>
+   <a href="/nomad.html">
+          <div class="project p-2">
+            <div class="project-title"><h1>Nomad</h1></div>
+            <div class="project-categ">Mobile app</div>
+            <div class="project-overlay"></div>
+          </div>
+  </a>
+  <a href="/fourth.html">
+          <div class="project p-3">
+            <div class="project-title"><h1>Fourth</h1></div>
+            <div class="project-categ">Branding</div>
+            <div class="project-overlay"></div>
+          </div>
+   </a>
+   <a href="/justgo.html"> 
+          <div class="project p-4">
+            <div class="project-title"><h1>Just Go</h1></div>
+            <div class="project-categ">Mobile app</div>
+            <div class="project-overlay"></div>
+          </div>
+    </a>
+    
+    <a href="/sketches.html"> 
+          <div class="project p-5">
+              <div class="project-title"><h1>Sketches</h1></div>
+              <div class="project-categ">Mulit-Media</div>
+              <div class="project-overlay"></div>
+            </div>
+    </a>
+
+    <a href=""> 
+      <div class="project p-6">
+          <div class="project-title"><h1>Typing</h1></div>
+          <div class="project-categ">Comming Soon</div>
+          <div class="project-overlay"></div>
+        </div>
+</a>
+
+          <div class="colab">
+            <p>You got a cool project on mind? Let’s collaborate and create your best
+                ‍<span class="colab-motion"></span></p>
+        </div>
+
+        <div class="cta">
+          <a href="mailto:work@stefansavanovic.com" class="cta-btn">Drop an Email</a>
+        </div>
+
+      </div>
+    </div>
+  
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/typed.js/2.0.5/typed.js"></script>
+   
+   <script>
+        var typed = new Typed('.animate', {
+          strings: [
+              "work^1000", 
+          ],
+            startDelay:  1800,
+            typeSpeed: 60,
+            backSpeed: 40,
+            loop: false
+        });
+      </script>
+
+<script>
+    var typed = new Typed('.colab-motion', {
+      strings: [
+          "website.^1000", 
+          "brand.^1000", 
+          "app.^1000", 
+      ],
+        typeSpeed: 60,
+        backSpeed: 40,
+        loop: true
+    });
+  </script>
+
+</body>
+</html>
+
+    <script>
+      var $cursor = $(".cursor"),
+        $overlay = $(".project-overlay");
+
+      function moveCircle(e) {
+        TweenLite.to($cursor, 0.5, {
+          css: {
+            left: e.pageX,
+            top: e.pageY
+          },
+          delay: 0.03
+        });
+      }
+
+      $(".p-1").hover(function() {
+        $(".cursor").css({ "background-image": "url(/images/image-3.png)" });
+      });
+      $(".p-2").hover(function() {
+        $(".cursor").css({ "background-image": "url(/images/image-2.png)" });
+      });
+      $(".p-3").hover(function() {
+        $(".cursor").css({ "background-image": "url(/images/image-4.png)" });
+      });
+      $(".p-4").hover(function() {
+        $(".cursor").css({ "background-image": "url(/images/image-5.png)" });
+      });
+      $(".p-5").hover(function() {
+        $(".cursor").css({ "background-image": "url(/images/image-1.png)" });
+      });
+      $(".p-6").hover(function() {
+        $(".cursor").css({ "background-image": "url(/images/image-6.png)" });
+      });
+
+      var flag = false;
+      $($overlay).mousemove(function() {
+        flag = true;
+        TweenLite.to($cursor, 0.3, { scale: 1, autoAlpha: 1 });
+        $($overlay).on("mousemove", moveCircle);
+      });
+
+      $($overlay).mouseout(function() {
+        flag = false;
+        TweenLite.to($cursor, 0.3, { scale: 0.1, autoAlpha: 0 });
+      });
+    </script>
+
+
+<script>
+    const circleType = new CircleType(
+        document.getElementById("rotated")
+    ).radius(80);
+
+    $(window).scroll(function() {
+        var offset = $(window).scrollTop();
+        offset = offset * 0.4;
+
+        $(".circular-text").css({
+            "-moz-transform": "rotate(" + offset + "deg)",
+            "-webkit-transform": "rotate(" + offset + "deg)",
+            "-o-transform": "rotate(" + offset + "deg)",
+            "-ms-transform": "rotate(" + offset + "deg)",
+            transform: "rotate(" + offset + "deg)"
+        });
+    });
+</script>
+
+</body>
+
+</html>
