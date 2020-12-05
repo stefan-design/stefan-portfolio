@@ -2,42 +2,42 @@
 
 @font-face {
     font-family: 'sofia-pro';
-    src: url(fonts/sofia_pro_regular_az-webfont.woff);
+    src: url(/fonts/sofia_pro_regular_az-webfont.woff);
     font-style: normal;
     font-weight: 400;
 }
 
 @font-face {
     font-family: 'sofia-pro';
-    src: url(fonts/sofia_pro_black_az-webfont.woff);
+    src: url(/fonts/sofia_pro_black_az-webfont.woff);
     font-style: normal;
     font-weight: 900;
 }
 
 @font-face {
     font-family: 'sofia-pro';
-    src: url(fonts/sofia_pro_bold_az-webfont.woff);
+    src: url(/fonts/sofia_pro_bold_az-webfont.woff);
     font-style: normal;
     font-weight: 800;
 }
 
 @font-face {
     font-family: 'sofia-pro';
-    src: url(fonts/sofia_pro_semi_bold_az-webfont.woff);
+    src: url(/fonts/sofia_pro_semi_bold_az-webfont.woff);
     font-style: normal;
     font-weight: 700;
 }
 
 @font-face {
     font-family: 'sofia-pro';
-    src: url(fonts/sofia_pro_medium_az-webfont.woff);
+    src: url(/fonts/sofia_pro_medium_az-webfont.woff);
     font-style: normal;
     font-weight: 600;
 }
 
 @font-face {
     font-family: 'sofia-pro';
-    src: url(fonts/sofia_pro_light_az-webfont.woff);
+    src: url(/fonts/sofia_pro_light_az-webfont.woff);
     font-style: normal;
     font-weight: 300;
 }
@@ -359,7 +359,7 @@ a:hover {
 }
 
 .bg-work {
-    background: url(images/work_hero.JPG) no-repeat 50% 50% ;
+    background: url(/images/work_hero.JPG) no-repeat 50% 50% ;
     background-size: cover;
     position: absolute;
     width: 100%;
