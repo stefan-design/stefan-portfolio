@@ -1,103 +1,142 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Projects | Fourth - Stefan Savanović - Digital Designer</title>
+    <title>Project - Sketches | Digital Designer Portfolio</title>
     <link rel="icon" href="/images/favicon.png">
-     <!--CSS -->
-     <link rel="stylesheet" href="css/styles.css">
 
-      <!-- Font Awesome -->
-  <script src="https://kit.fontawesome.com/198f8c7cb8.js" crossorigin="anonymous"></script>
+    <!-- stylesheet -->
+    <link rel="stylesheet" href="css/styles.css" />
 
-  <a href="/works.html" class="s"> <i class="fas fa-long-arrow-alt-left"></i> Work</a>
-  <a href="/justgo.html" class="s-r">Next <i class="fas fa-long-arrow-alt-right"></i></a>
+    <!-- greensock -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/2.1.3/TweenMax.min.js"></script>
+    <!-- locomotive-scroll -->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/locomotive-scroll@3.2.5/dist/locomotive-scroll.min.css">
+    <script src="https://cdn.jsdelivr.net/npm/locomotive-scroll@3.2.5/dist/locomotive-scroll.min.js"></script>
+
+       <!-- Kursor -->
+       <link rel="stylesheet" href="./dist/kursor.css">
+
 </head>
-<body class="project-body">
 
-    <div class="overlay2"></div>
-    <div class="overlay"></div>
+<body id="js-scroll">
+    <div class="wrapper">
 
-    <div class="smooth-scroll-wrapper">
-        <div class="content">
-            <section>
-                <div class="divs">
-                    <h1 id="pr-head">Fourth</h1>
-                    <img src="/images/image-4.png" />
-                    <h1>About the project</h1>
-                    <p>
-                        Branding, graphic and digital design for Fourth Photography duo. 
-                     </p>
-                </div>
-                <div class="divs">
-                    <img src="/images/projects/fourth  – 1.png" />
-                </div>
-                <div class="divs">
-                    <img src="/images/projects/fourth  – 2.png" />
-                </div>
-                <div class="divs">
-                    <img src="/images/projects/fourth  – 3.png" />
-                </div>
-                <div class="divs">
-                    <img src="/images/projects/fourth  – 4.png" />
-                </div>
-                <div class="divs">
-                    <img src="/images/projects/fourth  – 5.png" />
-                </div>
-                <div class="divs">
-                    <img src="/images/projects/fourth  – 6.png" />
-                </div>
-                <div class="divs">
-                    <img src="/images/projects/fourth  – 7.png" />
-                </div>
-                <div class="divs">
-                    <img src="/images/projects/fourth  – 8.png" />
-                </div>
-                <div class="divs">
-                    <img src="/images/projects/fourth  – 9.png" />
-                </div>
-                <div class="divs">
-                    <img src="/images/projects/fourth  – 10.png" />
-                </div>
-            </section>
+        <!-- menu -->
+        <nav class="menu2">
+            <div class="menu__logo">
+                <a href="index.html">S.</a>
+            </div>
+            <div class="menu__items">
+                <div class="menu__items-link"><a href="index.html">Projects</a></div>
+                <div class="menu__items-link"><a href="about.html">About</a></div>
+                <div class="contact"><a href="mailto:work@stefansavanovic.com"> Let's talk! </a></div>
+                
+            </div>
+        </nav>
+
+        <!-- background -->
+
+        <div class="bg-2"></div>
+
+
+        <!-- project section -->
+        <div class="project__container" data-scroll-section>
+
+            <div class="project__container-title" data-scroll>
+                <h1 class="anime-js-title">Fourth</h1>
+            </div>
+            <div class="project__container-subtitle" data-scroll>
+                <p>Logo ◦ Branding ◦ Digital</p>
+            </div>
+
+            <div class="project__container-description" data-scroll>
+                <p>Fourth is an fashion & lifestyle photography duo based in Novi Sad</p>
+            </div>
+
+            <div class="project__container-images">
+                <div class="project__image project__image-one">
+                    <img class="img" src="/images/fourth/fourth  – 1.png" alt="">
+                    <img class="img" src="/images/fourth/fourth  – 2.png" alt="">
+                    <img class="img" src="/images/fourth/fourth  – 3.png" alt="">
+                    <img class="img" src="/images/fourth/fourth  – 4.png" alt="">
+                    <img class="img" src="/images/fourth/fourth  – 5.png" alt="">
+                    <img class="img" src="/images/fourth/fourth  – 6.png" alt="">
+                    <img class="img" src="/images/fourth/fourth  – 7.png" alt="">
+                    <img class="img" src="/images/fourth/fourth  – 8.png" alt="">
+                    <img class="img" src="/images/fourth/fourth  – 9.png" alt="">
+                    <img class="img" src="/images/fourth/fourth  – 10.png" alt="">
+
+                    <div class="project-next-link" >
+                        <a href="sketch.html">Next</a>
+                    </div>
+            </div>
+
+            
+
         </div>
     </div>
 
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/animejs/2.0.2/anime.min.js"></script>
     <script>
-         const body = document.body,
-            scrollWrap = document.getElementsByClassName("smooth-scroll-wrapper")[0],
-            height = scrollWrap.getBoundingClientRect().height - 1,
-            speed = 0.04;
+        // smooth scroll 
+        // const scroll = new LocomotiveScroll({
+        //     el: document.querySelector('#js-scroll'),
+        //     smooth: true,
+        //     smoothMobile: true,
+        //     inertia: 0.5
+        // });
 
-        var offset = 0;
 
-        body.style.height = Math.floor(height) + "px";
+        // project title animation 
+        var textWrapper = document.querySelector('.anime-js-title');
+        textWrapper.innerHTML = textWrapper.textContent.replace(/\S/g, "<span class='letter'>$&</span>");
 
-        function smoothScroll() {
-            offset += (window.pageYOffset - offset) + speed;
+        anime.timeline()
+            .add({
+                targets: '.anime-js-title .letter',
+                translateY: [60, 0],
+                translateZ: 0,
+                opacity: [0, 1],
+                easing: "easeOutExpo",
+                duration: 1200,
+                delay: (el, i) => 600 + 30 * i
+            });
 
-            var scroll = "translateY(-" + offset + "px) translateZ(0)";
-            scrollWrap.style.transform = scroll;
+        // project subtitle animation 
+        TweenMax.from(".project__container-subtitle", 2, {
+            y: 10,
+            opacity: 0,
+            ease: Expo.easeInOut
+        });
 
-            callScroll = requestAnimationFrame(smoothScroll);
-        }
+                // project subtitle animation 
+                TweenMax.from(".project__container-description", 2, {
+            y: 10,
+            opacity: 0,
+            ease: Expo.easeInOut
+        });
 
-        smoothScroll();
-        const content = document.querySelector("section");
-        let currentPos = window.pageYOffset;
-
-        const callDistort = function () {
-            const newPos = window.pageYOffset;
-            const diff = newPos - currentPos;
-            const speed = diff * 0.4;
-
-            content.style.transform = "skewY(" + speed + "deg)";
-            currentPos = newPos;
-            requestAnimationFrame(callDistort);
-        };
-
-        callDistort();
+        // project image fade 
+        TweenMax.from(".project__image-one", 2, {
+            opacity: 0,
+            ease: Expo.easeInOut
+        });
     </script>
+
+    <script src="./dist/kursor.js"></script>
+
+    <script>
+    var kursorx = new kursor({
+        type: 4,
+        color: '#fff',
+        removeDefaultCursor: true,
+    })
+
+    </script>
+
 </body>
+
 </html>
