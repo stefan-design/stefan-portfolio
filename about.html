@@ -1,76 +1,89 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>About me</title>
+    <title>Stefan Savanović | About Digital Designer</title>
     <link rel="icon" href="/images/favicon.png">
-    <!-- Bootstrap CSS -->
-    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
-    <!--CSS -->
-    <link rel="stylesheet" href="css/styles.css">
-    <!-- Font Awesome -->
-  <script src="https://kit.fontawesome.com/198f8c7cb8.js" crossorigin="anonymous"></script>
 
-   <!-- Optional JavaScript -->
-    <!-- jQuery first, then Popper.js, then Bootstrap JS -->
-    <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js" integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1" crossorigin="anonymous"></script>
+    <!-- stylesheet -->
+    <link rel="stylesheet" href="css/styles.css" />
+
+    <!-- greensock -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/2.1.3/TweenMax.min.js"></script>
+
+    <!-- bootstrap -->
     <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js" integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM" crossorigin="anonymous"></script>
 
+    <!-- locomotive-scroll -->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/locomotive-scroll@3.2.5/dist/locomotive-scroll.min.css">
+    <script src="https://cdn.jsdelivr.net/npm/locomotive-scroll@3.2.5/dist/locomotive-scroll.min.js"></script>
+
+        <!-- Kursor -->
+        <link rel="stylesheet" href="./dist/kursor.css">
 
 </head>
-<body class="about-body">
 
-  <!-- <div class="overlay2"></div> -->
-  <!-- <div class="overlay"></div> -->
+<body id="js-scroll">
+    <div class="wrapper">
 
-    <div class="container-fluid">
-    <div class="row">
+       <!-- menu -->
+       <nav class="menu">
+        <div class="menu__logo">
+            <a href="index.html">S.</a>
+        </div>
+        <div class="menu__items">
+            <div class="menu__items-link"><a href="index.html">Projects</a></div>
+            <div class="menu__items-link active"><a href="about.html">About</a></div>
+            <div class="contact"><a href="mailto:work@stefansavanovic.com"> Let's talk! </a></div>
+            
+        </div>
+    </nav>
 
-        <div class="col-lg-5 left">
-          <video autoplay class="video"> <source src="/images/Video 02.mp4" type="video/mp4" > </video>
-       </div>
-     
-       <div class="col-lg-7 middle"">
-        <div class="mid">
-      <h1>digital designer</h1>
-        <p>Hello there, I’m glad to welcome you here. My name is Stefan Savanović, and I’m a Digital Designer with 6 years of experience across the areas of UI/UX, Web, and Logo & Branding design. New challenges and experiences are my thing. As technology progresses so fast, things are getting more and more complex each day, but being a designer gives me a special opportunity to make these complex processes clean, understandable, and joyful.</p>
-        <a href="mailto:work@stefansavanovic.com"><button class="btn btn-outline-dark">Contact me now</button></a>
-        <a href="https://drive.google.com/uc?export=download&id=1LkXjhbSLVxyTLQ-aSF0vjANqY5ZzAG8O"><button class="btn btn-outline-dark">Download my Resume</button></a>
+        <!-- background -->
+
+        <div class="bg-2"></div>
+
+        <!-- about-section -->
+        <div class="about__container" data-scroll-section>
+            <video autoplay class="video"> <source src="/images/about/Video 02.mp4" type="video/mp4" > </video>
+            <p class="about__container-data" data-scroll>Hello there, I’m glad to welcome you here. My name is Stefan Savanović, and I’m a Digital Designer with 6 years of experience across the areas of UI/UX, Web, and Logo & Branding design. New challenges and experiences are my thing. As technology progresses so fast, things are getting more and more complex each day, but being a designer gives me a special opportunity to make these complex processes clean, understandable, and joyful.</p>
+
+            <p data-scroll>If you have any questions or would like to have a chat, don't hesitate to <span
+                    class="about__container-contact-link"><a href="mailto:work@stefansavanovic.com" target="_blank">get
+                        in touch.</a></span></p>
+
+            <p data-scroll>Interested in my carreare and skills? <span class="about__container-contact-link"><a href="https://drive.google.com/uc?export=download&id=13eU6xZld-gpXMsxi-wVxmSD7ycRnYV0J" target="_blank">download my resume</a></span></p>
+
+            <h4 data-scroll>Passions of my personal life</h4>
+                
+            <p class="about__container-data" data-scroll>Having a job that you love feels great, doing the thing you enjoy every day feels like it’s not working at all. But having even more passions that intersect with each other makes living even better. And that is the life I’m living, and life I’m enjoying. Outside of design, I’m actively working as a photographer. I do it as part of a photography duo called FOURTH, which is created by me and my beautiful girlfriend Lenka. Her love is another passion that helps me win every new day.</p>
+                
+                        <img src="/images/about/bio-1.jpg" alt="">
+                        <img src="/images/about/bio-2.jpg" alt="">
+
+            <p class="about__container-data" data-scroll>Analog photography, my lovely girlfriend, a job that I enjoy. Is there anything else that can make all that even better? Well, the secret is in healthy honest smiles and small things that make them. The small things that combine all the work and hobbies I love, the thing that can teach you how to find that happiness in little details.</p>
+
+            <p class="about__container-data" data-scroll>Analog photography, my lovely girlfriend, a job that I enjoy. Is there anything else that can make all that even better? Well, the secret is in healthy honest smiles and small things that make them. The small things that combine all the work and hobbies I love, the thing that can teach you how to find that happiness in little details.</p>
+
+                       <img src="/images/about/bio-3.jpg" alt="">
+                       <img src="/images/about/bio-4.jpg" alt="">
+
         </div>
 
-        <a href="/works.html" class="nav-btn btn4">Work  <i class="fas fa-long-arrow-alt-right"></i></a>
-
-       </div>
-
-       <div class="bio">
-         <h2>Passions of my personal life </h2>
-         <p>Having a job that you love feels great, doing the thing you enjoy every day feels like it’s not working at all. But having even more passions that intersect with each other makes living even better. And that is the life I’m living, and life I’m enjoying. Outside of design, I’m actively working as a photographer. I do it as part of a photography duo called FOURTH, which is created by me and my beautiful girlfriend Lenka. Her love is another passion that helps me win every new day.</p>
-       </div>
-     
-       <div class="bio-img">
-         <img src="/images/bio-1.jpg" alt="">
-         <img src="/images/bio-2.jpg" alt="">
-       </div>
-
-       <div class="bio">
-        <p>Analog photography, my lovely girlfriend, a job that I enjoy. Is there anything else that can make all that even better? Well, the secret is in healthy honest smiles and small things that make them. The small things that combine all the work and hobbies I love, the thing that can teach you how to find that happiness in little details.</p>
-        <p>I found those details in many things, and I keep exploring more. I started taking care of a few plants, learning about their needs and beauty. Bringing more nature that I love in my regular living space. I’m just starting a blog around my design experience, intending to help at least a few people start their creative journey. And at the end of the day, it’s just that simple. Think about the small thing that matter, and stay positive.</p>
-      </div>
-
-      <div class="bio-img">
-        <img src="/images/bio-3.jpg" alt="">
-        <img src="/images/bio-4.jpg" alt="">
-      </div>
-     </div>
     </div>
 
-    <div class="home-c">
-        <a href="/index.html" class="home">S.</a>
-      </div>
+<script src="./dist/kursor.js"></script>
 
+<script>
+  var kursorx = new kursor({
+    type: 4,
+    color: '#fff',
+    removeDefaultCursor: true,
+  })
 
-
+</script>
 </body>
+
 </html>
